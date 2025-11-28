@@ -7,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    
+ <fieldset style="width: 350px;">
+    <legend>customer</legend>
 <table border="0" align="center" cellpadding="5">
-    <fieldset>
    <tr>
     <td>NAME*</td>
     <td>
@@ -17,17 +17,23 @@
     </td>
    </tr> 
    <tr>
-    <td>Email</td>
+    <td>Email*</td>
     <td> <input type="email" required maxlength="50" size="30"> </td>
 
    </tr>
    <tr>
     <td>Investmengt</td>
-    <td> <input type="" > </td>
+    <td>
+        <select><option>select</option>
+        <option>Gold</option>
+        <option>stocks</option>
+        <option>crypto</option>
+        </select>
+         </td>
    </tr>
 
     <tr>
-    <td>Data joined</td>
+    <td>Data joined*</td>
     <td> <input type="datetime" > </td>
    </tr>
 
@@ -36,10 +42,11 @@
     <td> <input type="radio" > </td>
    </tr>
 <tr>
-    <td>
+    <td colspan="2" align="center">
         <input type="button" value="OK">
         <input type="button" value="cancel">
-    </td>
-</tr>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
