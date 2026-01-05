@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Class</title>
+</head>
+<body>
+
+<script>
+    class Bank {
+
+        // constructor → data members
+        constructor(pin, balance) {
+            this.bankName = "HDFC";
+            this.bankIFSC = "HDFC001H";
+            this.pin = pin;
+            this.balance = balance;
+        }
+
+        // member function
+        showDetails() {
+            console.log("Bank Name:", this.bankName);
+            console.log("IFSC Code:", this.bankIFSC);
+            console.log("Balance:", this.balance);
+        }
+
+        // withdraw function
+        withdraw(amount) {
+            if (amount <= this.balance) {
+                this.balance -= amount;
+                console.log("Withdraw Successful");
+                console.log("Remaining Balance:", this.balance);
+            } else {
+                console.log("Insufficient Balance");
+            }
+        }
+    }
+
+    // object 1
+    const user = new Bank(123, 5000);
+    user.showDetails();
+    user.withdraw(1000);
+
+    // console.log("----------------");
+
+    // object 2
+    const karan = new Bank(234, 6000);
+    karan.showDetails();
+    karan.withdraw(2000);
+
+    // object 3
+    const Aryan = new Bank(567,1000);
+    Aryan.showDetails();
+    Aryan.withdraw(900);
+
+</script>
+
+</body>
+</html>
